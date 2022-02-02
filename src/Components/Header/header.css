@@ -1,0 +1,29 @@
+.header a{
+    color: black;
+    height: 110px;
+    line-height: 110px;
+}
+
+.header h1{
+    margin:auto;
+}
+
+
+.navegador{
+    width:30%;
+    margin:auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+
+}
+
+.header img{
+    height:110px;
+    width:110px;
+    margin: 0 10px;
+  }
+.logoyname{
+    display: flex;
+}

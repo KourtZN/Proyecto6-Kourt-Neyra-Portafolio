@@ -1,0 +1,19 @@
+.proyecto{
+    margin: 10px;
+    height: 250px;
+    width: 90%;
+    border: 1px solid red;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(75, 0, 130, 0.8);
+  }
+
+  .proyecto h1{
+    padding: 0;
+    margin:0;
+  }
+
+  .proyecto img{
+    height:200px;
+    width:230px;
+  }
