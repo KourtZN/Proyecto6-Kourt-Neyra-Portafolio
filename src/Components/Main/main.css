@@ -22,4 +22,16 @@
 .rdgl{
     margin: 0 auto;
     width:90%;
+
+    -moz-transition: opacity 0.3s; /* Firefox */
+    -webkit-transition: opacity 0.3s; /* Safari and Chrome */
+    -o-transition: opacity 0.3s; /* Opera */
+    transition: opacity 0.3s;
+    -webkit-transition : -webkit-filter 500ms;
 }
+.rdgl:hover{
+    -webkit-filter: blur(10px);
+    background:rgba(255, 0, 0, 0.5);
+    
+}
+

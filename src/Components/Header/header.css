@@ -1,5 +1,16 @@
+.header{
+    display:flex;
+    width:100%;
+    height:100vh;
+    margin:auto;
+    justify-content:space-between;
+    background-image: url("../../images/rdg.png");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.9);
+    color:white;
+}
+
 .header a{
-    color: black;
+    color: white;
     height: 110px;
     line-height: 110px;
 }
