@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-
+    height: 85vh;
+    top: 20vh;
     width: 90%;
+    position: relative;
 
   }

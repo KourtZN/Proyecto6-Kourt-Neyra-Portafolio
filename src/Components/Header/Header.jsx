@@ -1,28 +1,66 @@
 import React from 'react'
 import { Link } from 'react-router-dom' 
 import './header.css'
-import logo from '../../images/logo.png'
+import logo from '../../images/logo.jpg'
+import { Descripcion } from '../Descripcion/Descripcion';
 
 function Header(){
+
+  const [backcolor, setbackcolor] = React.useState('black');
+  const [col, setcol] = React.useState('black');
+  const [indice, setindice] = React.useState(0);
+  const [mostrardesc, setmostrardesc] = React.useState(false);
+
+  const useScrollHandler = () => {
+    const [scrolls, setScrolls] = React.useState(0);
+  
+    React.useEffect(() => {
+      const onScroll = () => {
+        const scrollCheck = window.scrollY > 10;
+        setScrolls(scrollCheck);
+      };
+  
+      document.addEventListener("scroll", onScroll);
+      return () => {
+        document.removeEventListener("scroll", onScroll);
+      };
+    }, [scrolls, setScrolls]);
+  
+    return scrolls;
+  };
+
+  function resetcolor(){
+    setbackcolor('black');
+    setindice(0);
+    setmostrardesc(false);
+    console.log('resetcolor')
+
+  }
+
+  const scrolls = useScrollHandler();
+
+
     return (   
-    <header className="header">
+    <header className={`header ${scrolls ? "headertop" : "headerbig"}`} style={{backgroundColor: backcolor}}>
+      <div className={scrolls ? "tops" : "tops1"}>
     <div className="logoyname">
     
-    <Link to='/'><img src={logo} alt="logo" /></Link>
-    <h1 className="titulo">Roca de Guía</h1>
-
+    <Link to='/'><img src={logo} alt="logo" className={`headerimg ${scrolls ? "headertopimg" : "headerbigimg"}`}/></Link>
+    <div ><h1 className="titulo">Kourt Neyra</h1>
+    </div>
+    
     </div> 
     
-    <nav className="navegador">
-    <Link to='/'>Inicio</Link>
-    <Link to='/Portafolio'>Portafolio</Link>
-    <Link to='/Nosotros'>Nosotros</Link>
-    <Link to='/Contacto'>Contacto</Link>
-    <Link to='/Reservaciones'>Reservaciones</Link>
+    <nav className={scrolls ? "superior" : "portada"}>
+    <Link to='/' onMouseEnter={() => {setbackcolor('red');setcol('red');setindice(1);setmostrardesc(true);console.log('mm')}} onMouseOut={resetcolor} >Sobre mí</Link>
+    <Link to='/Portafolio' onMouseEnter={() => {setbackcolor('blue');setcol('blue');setindice(2);setmostrardesc(true);console.log('Portafolio')}} onMouseOut={resetcolor}>Proyectos</Link>
+    <Link to='/Contacto' onMouseEnter={() => {setbackcolor('green');setcol('green');setindice(3);setmostrardesc(true);console.log('Contacto')}} onMouseOut={resetcolor}>¡Hablemos!</Link>
     </nav>
 
-    
-    
+    </div>
+    <div className={scrolls ? "tops2" : "tops1"}>
+      {mostrardesc ? <Descripcion col={col} indice={indice}/> : <></>}   
+    </div>
   </header>
     )
 }

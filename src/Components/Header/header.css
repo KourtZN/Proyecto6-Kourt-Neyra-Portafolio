@@ -1,40 +1,124 @@
 .header{
+    z-index: 99;
     display:flex;
+    flex-direction: column;
     width:100%;
-    height:100vh;
     margin:auto;
     justify-content:space-between;
-    background-image: url("../../images/rdg.png");
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.9);
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.85);
     color:white;
+    align-items: center;
+    
+    transition: position 250ms, height 250ms, background-color 200ms;
+    -webkit-transition: position 250ms, height 250ms, background-color 200ms;
+    -moz-transition: position 250ms, height 250ms, background-color 200ms;
+}
+.headerbig{
+    height:100vh;
+}
+.headertop{
+    height:10vh;
+    position: fixed;
+    top: 0;
 }
 
-.header a{
+
+.titulo{
+    margin:auto;
+    font-size: 70px;
+    vertical-align: middle;
+    justify-content: center;
+    padding:15px;
+    line-height: 110px;
+    height: 110px;
+    display: inline-block;
+}
+
+.portada{
+    margin:auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.portada a{
     color: white;
     height: 110px;
     line-height: 110px;
+    font-size: 35px;
+    padding: 0 15px;
+    text-decoration: none;  
+    
+
+}
+.portada a:hover{
+    font-weight: bold;
+    color: red;
+    height: 110px;
+    line-height: 110px;
+    border: 1px solid red;
+    box-sizing: border-box;
 }
 
-.header h1{
-    margin:auto;
-}
-
-
-.navegador{
+.superior{
     width:30%;
     margin:auto;
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     vertical-align: middle;
-
+}
+.superior a{
+    color: white;
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 35px;
+    padding: 0 15px;
+    text-decoration: none;  
+}
+.superior a:hover{
+    font-weight: bold;
+    color: red;
+    height: 10vh;
+    line-height: 10vh;
+    border: 1px solid red;
+    box-sizing: border-box;
 }
 
-.header img{
-    height:110px;
-    width:110px;
-    margin: 0 10px;
+.headerimg{
+    margin: auto;
+    border-radius: 1000px;
+
+    transition: position 250ms, height 250ms;
+    -webkit-transition: position 250ms, height 250ms;
+    -moz-transition: position 250ms, height 250ms;
+
+}
+.headerbigimg{
+    height:30vh;
+    vertical-align: middle;
+  }
+.headertopimg{
+    height:10vh;
   }
 .logoyname{
     display: flex;
+    align-items: center;  
+    
+}
+.tops1{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    }
+.tops{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.tops2{
+    height: 100%;
+    width: 100%;
+    display: none;
 }

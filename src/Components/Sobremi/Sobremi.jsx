@@ -1,8 +1,8 @@
 import React from 'react'
-import './main.css'
+import './sobremi.css'
 import rdgl from '../../images/rdgl.png';
 
-function Main(){
+function Sobremi(){
     return (
         <div className="maind"> 
         <p>Café</p>
@@ -13,4 +13,4 @@ function Main(){
       )
 }
 
-export { Main }
+export { Sobremi }
