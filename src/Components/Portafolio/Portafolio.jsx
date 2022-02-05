@@ -19,7 +19,7 @@ function Portafolio() {
         <Proyecto nombre="Cafetería (Restaurant App)" imag="cafe" enlace1="https://goofy-archimedes-4523ee.netlify.app/" enlace2="https://github.com/KourtZN/Ahmet_Fabian_Kourt_Neyra_Gomez_PROY4_RestaurantApp" 
         desc="Aplicación creada en React e implementando la base de datos Firebase, esta aplicación es un restaurante en el que puedes reservar tu mesa con anticipación, así como consultar el menú, con algunas adecuaciones puede convertirse en un ecommerce"/>
 
-        <Proyecto nombre="Portafolio" imag="portafolio" enlace1="/" enlace2="https://www.google.com" 
+        <Proyecto nombre="Portafolio" imag="portafolio" enlace1="/" enlace2="https://github.com/KourtZN/Proyecto6-Kourt-Neyra-Portafolio" 
         desc="Es la aplicación que estás navegando en este momento"/>
 
         </div>
