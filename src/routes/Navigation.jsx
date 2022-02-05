@@ -6,6 +6,7 @@ import { Routes , Route} from 'react-router-dom'
 import {Sobremi} from '../Components/Sobremi/Sobremi'
 import {Portafolio} from '../Components/Portafolio/Portafolio'
 import {Contacto} from '../Components/Contacto/Contacto'
+import {Experiencia} from '../Components/Experiencia/Experiencia'
 
 function Navigation() {
 
@@ -15,8 +16,7 @@ function Navigation() {
         <Route path="/" element={<Sobremi/>} exact/>
         <Route path="/Portafolio" element={<Portafolio/>} exact/>
         <Route path="/Contacto" element={<Contacto/>} exact/>
-        <Route path="/Nosotros" element={<Portafolio/>} exact/>
-        <Route path="/Reservaciones" element={<Portafolio/>} exact/>
+        <Route path="/Experiencia" element={<Experiencia/>} exact/>
         </Routes>
 
     </App>

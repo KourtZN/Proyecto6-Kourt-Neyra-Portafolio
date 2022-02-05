@@ -1,0 +1,23 @@
+.exp{
+    height: 110vh;
+    color: white;
+}
+.exp2{
+    margin: auto;
+    margin-top: 200px;
+    width: 50%;
+    border: 1px solid yellow;
+    height: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.redes a{
+    text-decoration: none;
+    padding: 20px;
+}
+.exp2 p{
+    margin: 10px 10%;
+    text-align: justify;
+}

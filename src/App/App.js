@@ -8,11 +8,11 @@ function App(props) {
   return (
   <div>
     <Header/>
+    <div className="separador"></div>
     <main className="main">
     {props.children}
     </main>
     <Footer/>
-  
   </div>
   )
 }

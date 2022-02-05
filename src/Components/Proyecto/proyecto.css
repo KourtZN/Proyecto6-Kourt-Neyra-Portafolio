@@ -1,19 +1,85 @@
 .proyecto{
-    margin: 10px;
-    height: 250px;
-    width: 90%;
-    border: 1px solid red;
+    margin: 10px auto;
+    border: 1px solid blue;
+    height: 325px;
+    width:45%;
     border-radius: 10px;
     text-align: center;
-    background-color: rgba(75, 0, 130, 0.8);
-  }
+    background-color: rgba(9, 0, 130, 0.15);
+    color:white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
 
-  .proyecto h1{
+    -moz-transition: opacity 0.3s, -webkit-filter 300ms; /* Firefox */
+    -webkit-transition: opacity 0.3s, -webkit-filter 300ms; /* Safari and Chrome */
+    -o-transition: opacity 0.3s, -webkit-filter 300ms; /* Opera */
+    transition: opacity 0.3s, -webkit-filter 300ms;
+  }
+.proyecto:hover .imgproyecto{
+    filter: blur(10px);  
+}
+.proyecto:hover .descrproyecto {
+  visibility: visible;
+  opacity: 1;
+}
+.descrproyecto{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: rgba(7, 7, 54, 0.6);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+/* transition effect. not necessary */
+transition: opacity .2s, visibility .2s;
+}
+.proyecto h1{
     padding: 0;
     margin:0;
   }
 
-  .proyecto img{
-    height:200px;
-    width:230px;
+  .imgproyecto img{
+    width:95%;
+    overflow: hidden;
   }
+
+  .imgproyecto{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+   .button{
+    text-decoration: none;
+    border: 1px solid blue;
+    background-color: rgba(0, 0, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    width: 20%;
+    margin: auto;
+    margin-left: 10px;
+  }
+  .button:hover{
+    background-color: rgba(0, 0, 255, 1);
+  }
+.descrproyecto p{
+  width: 75%;
+  margin: 20px auto;
+  text-align: justify;
+}
+
+

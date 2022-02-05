@@ -9,7 +9,9 @@ function Header(){
   const [backcolor, setbackcolor] = React.useState('black');
   const [col, setcol] = React.useState('black');
   const [indice, setindice] = React.useState(0);
-  const [mostrardesc, setmostrardesc] = React.useState(false);
+  const [mostrardesc, setmostrardesc] = React.useState(true);
+
+
 
   const useScrollHandler = () => {
     const [scrolls, setScrolls] = React.useState(0);
@@ -32,12 +34,17 @@ function Header(){
   function resetcolor(){
     setbackcolor('black');
     setindice(0);
-    setmostrardesc(false);
+    setcol('black');
+    //setmostrardesc(false);
     console.log('resetcolor')
 
   }
 
+
   const scrolls = useScrollHandler();
+
+
+
 
 
     return (   
@@ -45,16 +52,17 @@ function Header(){
       <div className={scrolls ? "tops" : "tops1"}>
     <div className="logoyname">
     
-    <Link to='/'><img src={logo} alt="logo" className={`headerimg ${scrolls ? "headertopimg" : "headerbigimg"}`}/></Link>
-    <div ><h1 className="titulo">Kourt Neyra</h1>
+    <Link to='/' onClick={() => {window.scrollTo(0, 0);}} ><img src={logo} alt="logo" className={`headerimg ${scrolls ? "headertopimg" : "headerbigimg"}`}/></Link>
+    <div onClick={() => {window.scrollTo(0, 0);}} ><h1 className="titulo">Kourt Neyra</h1>
     </div>
     
     </div> 
     
     <nav className={scrolls ? "superior" : "portada"}>
-    <Link to='/' onMouseEnter={() => {setbackcolor('red');setcol('red');setindice(1);setmostrardesc(true);console.log('mm')}} onMouseOut={resetcolor} >Sobre mí</Link>
-    <Link to='/Portafolio' onMouseEnter={() => {setbackcolor('blue');setcol('blue');setindice(2);setmostrardesc(true);console.log('Portafolio')}} onMouseOut={resetcolor}>Proyectos</Link>
-    <Link to='/Contacto' onMouseEnter={() => {setbackcolor('green');setcol('green');setindice(3);setmostrardesc(true);console.log('Contacto')}} onMouseOut={resetcolor}>¡Hablemos!</Link>
+    <Link to='/' onClick={() => {window.scrollTo(0, 11);}} onMouseEnter={() => {setbackcolor('red');setcol('red');setindice(1);setmostrardesc(true);}} onMouseOut={resetcolor} >Sobre mí</Link>
+    <Link to='/Portafolio' onClick={() => {window.scrollTo(0, 11);}} onMouseEnter={() => {setbackcolor('blue');setcol('blue');setindice(2);setmostrardesc(true);}} onMouseOut={resetcolor}>Proyectos</Link>
+    <Link to='/Contacto' onClick={() => {window.scrollTo(0, 11);}} onMouseEnter={() => {setbackcolor('green');setcol('green');setindice(3);setmostrardesc(true);}} onMouseOut={resetcolor}>¡Hablemos!</Link>
+    <Link to='/Experiencia' onClick={() => {window.scrollTo(0, 11);}} onMouseEnter={() => {setbackcolor('yellow');setcol('yellow');setindice(4);setmostrardesc(true);}} onMouseOut={resetcolor}>Experiencia</Link>
     </nav>
 
     </div>
